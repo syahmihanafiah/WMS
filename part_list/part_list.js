@@ -173,6 +173,7 @@
 					 { name: 'dock_code', type: 'string'},
 					 { name: 'shop_name', type: 'string'},
 					 { name: 'color', type: 'string'}, 
+					 { name: 'ownership_name', type: 'string'}, 
 					 { name: 'org_description', type: 'string'},
 					 { name: 'status', type: 'string'},
 					 { name: 'creation_date', type: 'date'}, 
@@ -191,6 +192,7 @@
 					back_number:trim($("#back_number").val()),
 					vendor_id:trim($("#vendor_id").val()),
 					vendor_code:trim($("#vendor_code").val()),
+					ownership: $("#ownership_id").val(),
 					status:$("#status").val()
 				},
                 root: 'Rows',   
@@ -264,7 +266,7 @@
 					{ text: 'Line Shop', datafield: 'line_shop', width:100, align: 'center', cellsalign: 'center'},
 					{ text: 'Dock Code', datafield: 'dock_code', width:100, align: 'center', cellsalign: 'center'},
 					{ text: 'Color', datafield: 'color', width:100, align: 'center', cellsalign: 'center'}, 
-					
+					{ text: 'Ownership', datafield: 'ownership_name', width:100, align: 'center', cellsalign: 'center'}, 					
 					{ text: 'Organization', datafield: 'org_description', width:200}, 
 					{ text: 'Status', datafield: 'status', width:80, align: 'center', cellsalign: 'center'}, 
 					{ text: 'Created Date', datafield: 'creation_date', cellsformat: 'dd/MM/yyyy hh:mm:ss tt', width:150, align: 'center', cellsalign: 'center' }, 

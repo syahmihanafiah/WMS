@@ -304,6 +304,7 @@
                                                                                      AND NVL(inactive_date, sysdate+1) > sysdate)
                                                     )) tpl_name,
                                                 f.tpl_delivery_category,
+                                                z.org_description ownership_name, <!---ADDED BY SYAHMI HANAFIAH--->
                                                 e.org_description,
                                                 TO_CHAR(a.creation_date, 'dd/mm/yyyy hh:mm:ss AM') as creation_date, 
                                                 a.creation_by, 
@@ -340,7 +341,8 @@
                                                     AND d.active_date <= SYSDATE
                                                     AND NVL (d.inactive_date, SYSDATE + 1) > SYSDATE
                                                 ) c,
-                                                frm_vendors d,frm_organizations e,
+                                                frm_vendors d,frm_organizations e, 
+                                                frm_organizations z,  <!---ADDED BY SYAHMI HANAFIAH--->
                                                 (SELECT part_list_header_id,
                                                     b.vendor_name tpl_name,
                                                     delivery_category tpl_delivery_category
@@ -353,6 +355,10 @@
                                                  AND a.part_list_header_id = f.part_list_header_id(+)
                                                 AND a.vendor_id = d.vendor_id
                                                 AND a.org_id = e.org_id
+                                                <!---ADDED BY SYAHMI (START)--->
+                                                AND z.ownership_flag = 'Y'
+                                                AND a.ownership_id = z.org_id
+                                                <!---ADDED BY SYAHMI (END)--->
                                                 AND d.active_date <= SYSDATE
                                                 AND NVL (d.inactive_date, SYSDATE + 1) > SYSDATE
                                                 <cfif org_id NEQ "" >
