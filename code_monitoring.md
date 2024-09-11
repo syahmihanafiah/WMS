@@ -1,0 +1,21 @@
+Thie is a trial to backup PDIO screen at PMS in the PROMISE using Github
+
+TOTAL TABLE ALTERED:
+---LIST OF TABLE THAT HAVE BEEN ALTERED
+---1)
+SELECT * FROM GEN_SHOP
+---2) 
+SELECT * FROM GEN_LINE_SHOP
+---3)
+SELECT * FROM GEN_BUY_OFF_POINT
+---4) 
+SELECT * FROM GEN_BOX
+---5)
+SELECT * FROM GEN_PART_LIST_HEADERS
+---6)
+SELECT * FROM GEN_PART_SET
+---7)
+SELECT * FROM gen_tpl_concept_headers
+---8)
+SELECT * FROM gen_route_group_header
+
